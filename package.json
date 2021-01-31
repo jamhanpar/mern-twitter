@@ -17,7 +17,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "server:debug": "nodemon --inspect app.js"
   },
   "repository": {
     "type": "git",
