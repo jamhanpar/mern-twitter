@@ -1,0 +1,31 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "Adding a .gitignore",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.14",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.7",
+    "passport-jwt": "^4.0.0",
+    "passport": "^0.4.1",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "twitter"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "twitter",
+  "license": "UNLICENSED"
+}
