@@ -5,10 +5,10 @@ module.exports = function(data) {
     let errors = {};
 
     // checking to see if email is a valid text
-    data.email = validText(data.email) ? data.email : ''
-    data.password = validText(data.password) ? data.password : ''
+    data.email = validText(data.email) ? data.email : '';
+    data.password = validText(data.password) ? data.password : '';
 
-    if (Validator.isEmail(data.email)) {
+    if (!Validator.isEmail(data.email)) {
         errors.email = "Email is invalid";
     }
 

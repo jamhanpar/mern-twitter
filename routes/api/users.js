@@ -5,17 +5,18 @@ const bcrypt = require("bcryptjs");
 const keys = require('../../config/keys');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-// file breaks after adding these
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
-router.get("/current", passport.authenticate("jwt", { session: false }),
-    (req, res) => {
-        res.send(req.user);
-    }
-)
+router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+  res.json({
+    id: req.user.id,
+    handle: req.user.handle,
+    email: req.user.email
+  });
+})
 
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
