@@ -15,12 +15,12 @@ import { setAuthToken } from './util/session_api_util';
 
 // We have not created this action yet, but will do so in the next step
 import { logout } from './actions/session_actions';
-import axios from 'axios';
+// import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
-  window.axios = axios;
+  // window.axios = axios;
 
   // If a returning user has a session token stored in localStorage
   if (localStorage.jwtToken) {
