@@ -20,7 +20,7 @@ import axios from 'axios';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
-  window.axios = axios
+  window.axios = axios;
 
   // If a returning user has a session token stored in localStorage
   if (localStorage.jwtToken) {
