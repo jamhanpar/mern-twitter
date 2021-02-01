@@ -21,16 +21,6 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
-app.get("/", (req, res) => {
-  const user = new User({
-    handle: "demo",
-    email: "john@smith.com",
-    password: "password"
-  })
-  user.save()
-  res.send("Testing 2")
-});
-
 app.use("/api/users", users);
 app.use("/api/tweets", tweets);
 
